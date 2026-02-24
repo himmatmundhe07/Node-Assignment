@@ -39,7 +39,7 @@ app.get("/students/average", (req, res) => {
     return sum + student.cgpa;
   }, 0)
   const average = totalCgpa / students.length;
-  res.status(200).json({ AverageCgpa: average });
+  res.status(200).json({ AverageCgpa: average.toFixed(2) });
 });
 
 app.get("/students/count", (req, res) => {
